@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('images/pexels-julius-silver-753626.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Asigură că body-ul ocupă întreaga înălțime a viewport-ului */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+header {
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding-right: 400px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 16px;
+    text-transform: uppercase;
+}
+
+.menu li a.active, .menu li a:hover {
+    border-bottom: 3px solid yellow;
+}
+
+.hero {
+    padding: 32px;
+}
+
+.hero h1 {
+    font-size: 64px;
+}
+
+.hero p {
+    font-size: 40px;
+}
+
+.packages {
+    margin-top: 250px;
+    text-align: center;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.8);
+    padding-bottom: 80px;
+}
+
+.package {
+    display: inline-block;
+    margin: 16px;
+    padding: 16px;
+    padding-bottom: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    height: 450px;
+    overflow: hidden;
+
+}
+
+.package img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+
+
+.logo-link {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+.logo {
+    height: 350px;
+    width: auto;
+}
+
+
+
+.explorer-slogan {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 150px;
+    margin-bottom: 20px;
+
+
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #8aceda;
+
+
+}
+
+.content-text {
+    width: 50%;
+    padding: 20px;
+    background-color: #8aceda;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    text-align: justify;
+}
+
+.content-image {
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+blockquote {
+    quotes: "“" "”" "‘" "’";
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    margin-top: 1em;
+}
+
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.service {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.service h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.service p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666666;
+}
+
+
+.service {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.site-footer {
+    background: #3284a1;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    /*width: 100%;*/
+    bottom:0;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+
+.footer-content a {
+    color: #55acee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #a2d9ce;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#about-us {
+    background-color: #f4f4f4;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#about-us h2 {
+    color: #333;
+}
+
+#about-us p {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail-box {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+.detail-box img {
+    width: 100px;
+    height: auto;
+}
+
+.detail-box h3 {
+    color: #333;
+    text-transform: uppercase;
+}
+
+.detail-box p {
+    color: #666;
+    font-size: 14px;
+}
+
+.mission-section {
+    display: flex;
+    background: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mission-image {
+    flex-basis: 50%;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mission-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mission-text h2 {
+    margin-bottom: 0.5em;
+}
+
+.mission-text p {
+    margin-top: 0;
+}
+
+#booking-date-picker {
+    width: 25%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#booking-date-picker h2 {
+    margin-bottom: 20px;
+}
+
+.date-picker-container {
+    margin: 10px 0;
+}
+
+.date-picker-container label {
+    margin-right: 10px;
+}
+
+.date-picker-container input[type="date"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.date-picker-container input[type="date"]:hover {
+    border-color: #5cb85c;
+}
+
+#date-picker-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#date-picker-form button:hover {
+    background-color: #4cae4c;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 177px;
+    z-index: 1000;
+
+}
+
+
+nav li:hover > .submenu {
+    display: block;
+}
+
+
+.submenu li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*.submenu a:hover {*/
+/*    background-color: #ddd; !* Efect de hover pentru link-uri *!*/
+/*}*/
+
+.submenu button {
+    display: block;
+    background-color: #93bfd2;
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.submenu button:hover {
+    background-color: #e8e8e8;
+    color: #000000;
+}
+
+
+
+
+
+
+.destinations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+
+
+}
+
+.destination {
+    flex: 0 1 calc(33.333% - 40px);
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+    /*padding: 10px;*/
+}
+
+.destination img {
+    width: 100%;
+    height: 350px;
+    /*height: auto;*/
+
+}
+
+.destination h3 {
+    color: #333;
+    padding: 10px;
+}
+
+.destination p {
+    color: #666;
+    padding: 0 10px 10px;
+}
+
+.destination .price {
+    font-weight: bold;
+    color: #007BFF;
+    padding: 10px;
+    display: block;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.destination:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+#date-picker-form .date-picker-container {
+    margin-bottom: 15px;
+}
+
+#date-picker-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+#contact-section {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.contact-header {
+    background-color: #969fa7;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: -30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.contact-info p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-info p strong {
+    display: block;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.contact-header h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;}
+
+.contact-image-container {
+    text-align: center;
+    margin-top: 20px; }
+
+.contact-image-container img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.menu-button {
+    color: white; /* culoarea textului */
+    background-color: transparent; /* fundalul butonului */
+    border: none; /* elimină border-ul implicit */
+    padding: 10px 20px; /* spațiere internă */
+    text-transform: uppercase; /* transformă textul în majuscule */
+    transition: background-color 0.3s, color 0.3s; /* tranziție pentru hover */
+}
+
+/*.menu-button:hover, .menu-button.active {*/
+/*    background-color: #035096; !* culoarea de fundal la hover și pentru activ *!*/
+/*    color: #FFF; !* culoarea textului la hover și pentru activ *!*/
+/*}*/
+
+
+button {
+    background-color: #007BFF; /* Albastru */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Albastru mai închis la hover */
+}
+
+/* CSS for the destination component */
+.destination {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+}
+
+/* CSS for the highlighted state */
+.highlighted {
+    transform: scale(1.1); /* Scales up the element */
+    background-color: #eee4a6; /* Light yellow background, change as needed */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.search-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#searchInput {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form {
+    position: absolute;
+    right: 50px; /* Poziționează formularul de căutare la 20px de marginea dreaptă a header-ului */
+    top: 50%;
+    transform: translateY(-50%); /* Centrează vertical */
+    width: 300px;
+}
+.search-wrapper {
+    margin-left: auto;
+    padding-right: 20px; /* Ajustează spațiul de pe partea dreaptă */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007BFF; /* Schimbă la culoarea dorită */
+    background-color: #fff;
+}
+
+.search-button {
+    position: absolute;
+    right: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #007BFF; /* Schimbă la culoarea dorită */
+    font-size: 16px;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+}
+
+/* Stil opțional pentru iconița de căutare dacă folosești unul */
+.search-icon {
+    color: #007BFF; /* Potrivește culoarea cu tema site-ului */
+}
+
+
+.main-content {
+    width: 40%;
+    margin: 20px auto; /* Acest stil centrează containerul pe pagină */
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: 880px;
+    overflow: auto;
+    align-items: center;
+
+}
+
+.destination-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.destination-image {
+    width: 100%;
+    height:450px;
+    margin-bottom: 20px; /* spațiu între imagine și textul de sub ea */
+    border-radius: 5px;
+
+}
+
+.price {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .destination-image {
+        height: 200px;
+    }
+}
+
+/*h3, p, .price {*/
+/*    text-align: center; !* Centrarea textului *!*/
+/*    margin-bottom: 50px; !* spațiu între elementele de text *!*/
+/*}*/
+
+.menu li Button {
+     /* Sky blue color */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+/* Hover effect for the buttons */
+.menu li Button:hover {
+    background-color: #2980b9; /* Darker blue */
+}
+
+
+
+
+
+.logout-menu {
+    display: none;
+position: absolute;
+    left: 0;
+    background: #0c88e0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+}
+
+.menu li:hover .logout-menu {
+    display: block;
+}
+
+
+
+.profile-container {
+    padding: 20px;
+}
+
+.reservations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-item p {
+    margin: 10px 0;
+}
